@@ -3,10 +3,12 @@ from io import BytesIO
 
 import gradio as gr
 from PIL import Image
+import spaces
 
 from src.inference import CLASSES_PATH, MODEL_PATH, predict_food_image
 
 
+@spaces.GPU
 def classify_image(image: Image.Image | None) -> tuple[str, dict[str, float]]:
     """Classify an uploaded image and return its top five predictions."""
     if image is None:
