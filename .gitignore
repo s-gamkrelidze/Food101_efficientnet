@@ -1,0 +1,26 @@
+
+# Ignore virtual environments
+.venv*
+venv/
+
+# Ignore heavy data and training code
+data/
+pipeline/
+saved_models/
+# Keep only the inference module for the Hugging Face Space.
+src/*
+!src/
+src/*
+!src/inference.py
+steps/
+export_zenml_runs.py
+run_deployment.py
+testing_file.ipynb
+zenml_model_comparison*
+image.png
+
+# KEEP these for the Space:
+# app.py
+# requirements.txt
+# README.md
+# best_model/
